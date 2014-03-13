@@ -3,13 +3,16 @@ require 'menu'
 
 describe "The menu" do
 
-  it "knows about the items" do
+  it "initializes with the correct file" do
     menu = Menu.new
 
-    expect(menu.items).to match_array([
-                               Item.new("Channa Masala", 5.95, "Yummy goodness"),
-                               Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness"),
-                               Item.new("Saag Paneer",5.95,"Yummy goodness")
-                             ])
+    expected = CSV.open('/Users/stevenmagelowitz/gSchoolWork/dynamic_restaurant_site/config/menu.csv').read
+    expect(expected).to eq(menu.file.read)
+  end
+
+  it "finds " do
+    menu = Menu.new
+
+
   end
 end
