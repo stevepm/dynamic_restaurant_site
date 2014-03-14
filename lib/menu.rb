@@ -11,7 +11,7 @@ class Menu
 
   def menu_items
     @file.each do |row|
-      @items_array << [row['name'],row['price'],row['description'],row['image']]
+      @items_array << Item.new(row['name'],row['price'],row['description'],row['image'])
     end
     @items_array
   end

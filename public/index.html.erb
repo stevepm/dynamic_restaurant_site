@@ -28,14 +28,16 @@
     idleness in the hold; and, to accelerate the affair, the blacksmith was commanded to
     proceed at once to the forging of whatever iron contrivances might be needed.
   </p>
-  <img src="/images/food1.jpg">
 
-  <dl>
-    <% Menu.new.menu_items.each do |item| %>
-      <dt><%= item.name %> - <%= item.price%></dt>
-      <dd><%= item.description %> </dd>
-    <% end %>
-  </dl>
+  <div class="menu">
+    <dl>
+      <% Menu.new.menu_items.each do |item| %>
+        <img src="/images/<%= item.image %>">
+        <dt><%= item.name %> - <%= item.price%></dt>
+        <dd><%= item.description %> </dd>
+      <% end %>
+    </dl>
+  </div>
 </main>
 
 <footer>

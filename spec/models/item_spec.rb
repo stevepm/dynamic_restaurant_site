@@ -31,7 +31,7 @@ describe "Items for the menu" do
   it "gets the correct path for the image" do
     item = Item.new("Channa Masala", "5.95", "yummy in my tummy", "food1.jpg")
 
-    expect(File.expand_path('/Users/stevenmagelowitz/gSchoolWork/dynamic_restaurant_site/public/images/food1.jpg')).to eq(item.image)
+    expect('food1.jpg').to eq(item.image)
 
   end
 

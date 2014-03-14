@@ -20,6 +20,7 @@ footer {
     padding-bottom: 1em;
     margin-top: 1em;
     text-align: center;
+    clear:both;
 }
 
 address {
@@ -30,8 +31,9 @@ address {
 }
 
 img {
-    display: inline-block;
-    width: 49%;
+    display: block;
+    width: 200px;
+    height: 150px;
     vertical-align: middle;
 }
 
@@ -51,6 +53,20 @@ dl {
     width: 40%;
     margin-left: 1em;
     vertical-align: middle;
+}
+.menu{
+    height: 300px;
+    width: 550px;
+}
+.menu img{
+    position:relative;
+    clear: right;
+    float:left;
+}
+.menu dt, dd{
+    position:relative;
+    clear: left;
+    right:-250px;
 }
 
 dt {
