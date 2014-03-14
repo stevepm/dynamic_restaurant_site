@@ -5,7 +5,7 @@ class Item
     @name = name
     @price = price
     @description = description
-    @image = image
+    @image = File.expand_path("../dynamic_restaurant_site/public/images/#{image}")
   end
 
   def == (other)

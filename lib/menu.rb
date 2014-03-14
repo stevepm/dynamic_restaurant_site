@@ -2,28 +2,18 @@ require 'item'
 require 'csv'
 
 class Menu
-  attr_accessor :file
+  attr_accessor :file, :items_array
 
   def initialize
-    @file = CSV.open(File.expand_path('../dynamic_restaurant_site/config/menu.csv'))
+    @file = CSV.open(File.expand_path('../dynamic_restaurant_site/config/menu.csv'), headers: true)
+    @items_array = []
   end
 
-  def find_items
-    @file.readlines do |line|
-
+  def menu_items
+    @file.each do |row|
+      @items_array << [row['name'],row['price'],row['description'],row['image']]
     end
-  end
-
-  def items
-    [
-      Item.new("Channa Masala", 5.95, "Yummy goodness", "test"),
-      Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "test"),
-      Item.new("Saag Paneer",5.95,"Yummy goodness", "test")
-    ]
-  end
-
-  def == (object)
-    self.file == object.file
+    @items_array
   end
 
 end
