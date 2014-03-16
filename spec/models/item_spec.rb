@@ -35,4 +35,10 @@ describe "Items for the menu" do
 
   end
 
+  it "discounts the price by 10% on wednesdays" do
+    item = Item.new("Channa Masala", "5.95", "yummy in my tummy", "food1.jpg")
+    wed = DateTime.new(2014,3,19)
+    expect(item.price_check(item.price, wed)).to eq('5.36')
+  end
+
 end
