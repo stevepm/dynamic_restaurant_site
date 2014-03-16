@@ -5,7 +5,7 @@ class Menu
   attr_accessor :file, :items_array
 
   def initialize
-    @file = CSV.open(File.expand_path('../dynamic_restaurant_site/config/menu.csv'), headers: true)
+    @file = CSV.open(File.expand_path('../../config/menu.csv',__FILE__), headers: true)
     @items_array = []
   end
 
