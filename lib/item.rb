@@ -1,11 +1,12 @@
 class Item
-  attr_accessor :name, :price, :description, :image
+  attr_accessor :name, :price, :description, :image, :days
 
-  def initialize(name = "Unknown", price = "Unknown", description = "Unknown", image = "food1.jpg")
+  def initialize(name = "Unknown", price = "Unknown", description = "Unknown", image = "food1.jpg", days = '1-2-3-4-5-6-7')
     @name = name
     @price = price_check(price)
     @description = description
     @image = image
+    @days = days
   end
 
   def price_check(price, day = Date.today)
@@ -21,6 +22,9 @@ class Item
     self.price == other.price
     self.description == other.description
     self.image == other.image
+    self.days = other.days
   end
+
+
 
 end

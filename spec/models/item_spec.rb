@@ -22,8 +22,8 @@ describe "Items for the menu" do
   end
 
   it "knows that two items are the same if they have the same attributes" do
-    item = Item.new("Channa Masala", "5.95", "yummy in my tummy", "test.jpg")
-    item2 = Item.new("Channa Masala", "5.95", "yummy in my tummy", "test.jpg")
+    item = Item.new("Channa Masala", "5.95", "yummy in my tummy", "test.jpg", '1-2')
+    item2 = Item.new("Channa Masala", "5.95", "yummy in my tummy", "test.jpg", '1-2')
 
     expect(item).to eq(item2)
   end
